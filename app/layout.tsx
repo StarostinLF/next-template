@@ -7,8 +7,6 @@ import { getPageUrl } from '@/lib/get-page-url';
 import { SITE_NAME, DESCRIPTION } from '@/lib/constants';
 import { mainFont } from '@/lib/fonts';
 
-import StoreProvider from './StoreProvider';
-
 export async function generateMetadata(): Promise<Metadata> {
 	const { baseUrl } = await getPageUrl();
 
@@ -104,9 +102,11 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang='en'>
-			<body className={`${mainFont.className} antialiased`}>
-				<StoreProvider>{children}</StoreProvider>
+		<html className={'h-full min-h-dvh scroll-smooth'} lang={'ru'}>
+			<body
+				className={`${mainFont.className} flex h-full min-h-dvh flex-col scroll-smooth text-sm text-black antialiased`}
+			>
+				{children}
 			</body>
 		</html>
 	);

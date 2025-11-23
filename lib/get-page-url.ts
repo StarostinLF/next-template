@@ -2,6 +2,7 @@
 
 import { headers } from 'next/headers';
 
+/* Получение URL-адреса страницы */
 export async function getPageUrl() {
 	const headersList = await headers();
 	const domain = headersList.get('host');

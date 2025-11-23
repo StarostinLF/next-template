@@ -1,3 +1,5 @@
+/* Миксины для работы с Flexbox (без использования Tailwind CSS) */
+
 @mixin box-type(
 	$display,
 	$flex-wrap,
@@ -21,8 +23,8 @@
 }
 
 @mixin container(
-	$min-inline-size: 320,
-	$max-inline-size: 1440,
+	$min-inline-size: 320px,
+	$max-inline-size: 1440px,
 	$media-padding-x: 0
 ) {
 	inline-size: 100%;

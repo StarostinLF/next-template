@@ -2,6 +2,8 @@
 
 import { cookies } from 'next/headers';
 
+/* Сохранение данных в cookie */
+
 export async function saveToCookie(name: string, data: object) {
 	const cookieStore = await cookies();
 
@@ -15,6 +17,7 @@ export async function saveToCookie(name: string, data: object) {
 	});
 }
 
+/* Загрузка данных из cookie */
 export async function loadFromCookie<T extends object>(
 	name: string,
 ): Promise<T> {
@@ -28,6 +31,7 @@ export async function loadFromCookie<T extends object>(
 	return {} as T;
 }
 
+/* Удаление cookie */
 export async function deleteCookie(name: string) {
 	const cookieStore = await cookies();
 

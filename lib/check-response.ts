@@ -1,3 +1,4 @@
+/* Проверка ответа от API */
 export async function checkResponse<T extends object>(
 	response: Response,
 ): Promise<T> {

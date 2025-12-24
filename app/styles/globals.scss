@@ -1,0 +1,9 @@
+@use './config/mixins';
+
+:root {
+	--main-font-family: 'Inter', 'Inter Fallback';
+	--title-font-family: 'Roboto', 'Roboto Fallback';
+	--main-font-size: clamp(0.75rem, 0.7rem + 0.25vw, 1rem);
+	--title-font-size: clamp(1.25rem, 1.15rem + 0.5vw, 1.75rem);
+	--transition: 0.25s ease;
+}
